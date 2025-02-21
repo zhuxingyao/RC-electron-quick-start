@@ -1,0 +1,44 @@
+{
+  "name": "electron-quick-start",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "dev": "concurrently \"npm run start\" \"npm run web\"",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "web": "cd webApp && npm run dev",
+    "build:web": "cd webApp && npm run build",
+    "build": "npm run build:web && cnpm run make"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "@electron-forge/cli": "^7.6.1",
+    "@electron-forge/maker-deb": "^7.6.1",
+    "@electron-forge/maker-rpm": "^7.6.1",
+    "@electron-forge/maker-squirrel": "^7.6.1",
+    "@electron-forge/maker-zip": "^7.6.1",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.6.1",
+    "@electron-forge/plugin-fuses": "^7.6.1",
+    "@electron/fuses": "^1.8.0",
+    "concurrently": "^9.1.2",
+    "electron": "^34.1.1"
+  },
+  "dependencies": {
+    "@rongcloud/electron": "^5.12.4",
+    "@rongcloud/electron-renderer": "^5.12.4",
+    "@rongcloud/engine": "^5.12.4",
+    "@rongcloud/imlib-next": "^5.12.4",
+    "electron-squirrel-startup": "^1.0.1"
+  }
+}
